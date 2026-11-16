@@ -12,6 +12,54 @@
   },
   "accounts": [
     {
+      "id": "acc_1794826349407_zdh9g",
+      "email": "qwdejhfgjef@feat1.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-9XSL-RGCC",
+      "status": "available",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826349407_uc7l0",
+      "email": "wefwfjhggdf@feat1.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-RS4M-9CM6",
+      "status": "available",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826349407_axdj3",
+      "email": "qwdsjqdhjdff@feat1.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-HTNL-9DDN",
+      "status": "available",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826349407_11ha4",
+      "email": "wqwedwqhdfjf@feat1.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-7HR3-MF3F",
+      "status": "available",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
       "id": "acc_1794826166149_oifta",
       "email": "wqwedwqhdfjf@feat.uk",
       "password": "11223344",
@@ -121,6 +169,42 @@
     }
   ],
   "codes": [
+    {
+      "id": "code_1794826349407_4vpa1",
+      "code": "RII-9XSL-RGCC",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "description": "Giveaway akun qwdejhfgjef@feat1.uk"
+    },
+    {
+      "id": "code_1794826349407_s57b2",
+      "code": "RII-RS4M-9CM6",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "description": "Giveaway akun wefwfjhggdf@feat1.uk"
+    },
+    {
+      "id": "code_1794826349407_7h263",
+      "code": "RII-HTNL-9DDN",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "description": "Giveaway akun qwdsjqdhjdff@feat1.uk"
+    },
+    {
+      "id": "code_1794826349407_yk4cl",
+      "code": "RII-7HR3-MF3F",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:52:29.407Z",
+      "description": "Giveaway akun wqwedwqhdfjf@feat1.uk"
+    },
     {
       "id": "code_1794826166149_652po",
       "code": "RII-Y8BY-VHXS",
