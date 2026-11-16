@@ -10,34 +10,7 @@
     "telegram": "https://t.me",
     "limitOnePerPerson": true
   },
-  "accounts": [
-    {
-      "id": "acc_1794824585406_s0qev",
-      "email": "refhgrfggd@2.uk",
-      "password": "11223344",
-      "notes": "",
-      "giveawayCode": "RII-UTLA-59L6",
-      "status": "claimed",
-      "createdAt": "2026-11-16T10:23:05.406Z",
-      "claimedAt": "2026-11-16T10:29:17.432Z",
-      "claimedByCode": "RII-UTLA-59L6",
-      "claimedByIp": "36.65.1.96",
-      "claimedByDevice": "did_1794824627193_rw4snhg2"
-    },
-    {
-      "id": "acc_1794824561542_sh1ey",
-      "email": "refhgrfggd@1.uk",
-      "password": "11223344",
-      "notes": "",
-      "giveawayCode": "RII-AHWA-ND4H",
-      "status": "claimed",
-      "createdAt": "2026-11-16T10:22:41.542Z",
-      "claimedAt": "2026-11-16T10:25:48.442Z",
-      "claimedByCode": "RII-AHWA-ND4H",
-      "claimedByIp": "36.65.1.96",
-      "claimedByDevice": "did_1794824627193_rw4snhg2"
-    }
-  ],
+  "accounts": [],
   "codes": [
     {
       "id": "code_1794824585406_s1c83",
