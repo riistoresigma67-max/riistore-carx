@@ -67,11 +67,12 @@
       "password": "11223344",
       "notes": "Stok CarX Street riistore",
       "giveawayCode": "RII-LT4P-V5Z3",
-      "status": "available",
+      "status": "claimed",
       "createdAt": "2026-11-16T12:00:22.095Z",
-      "claimedAt": null,
-      "claimedByCode": null,
-      "claimedByIp": null
+      "claimedAt": "2026-11-16T12:07:36.090Z",
+      "claimedByCode": "RII-LT4P-V5Z3",
+      "claimedByIp": "182.1.136.182",
+      "claimedByDevice": "did_1794830742282_73hfrq9v"
     },
     {
       "id": "acc_1794830422095_7kxye",
@@ -129,11 +130,12 @@
       "password": "11223344",
       "notes": "Stok CarX Street riistore",
       "giveawayCode": "RII-B9CY-AUU4",
-      "status": "available",
+      "status": "claimed",
       "createdAt": "2026-11-16T10:58:49.112Z",
-      "claimedAt": null,
-      "claimedByCode": null,
-      "claimedByIp": null
+      "claimedAt": "2026-11-16T12:07:49.152Z",
+      "claimedByCode": "RII-B9CY-AUU4",
+      "claimedByIp": "77.111.246.8",
+      "claimedByDevice": "did_1794830732749_m6j7ipk8"
     },
     {
       "id": "acc_1794826729112_5doir",
@@ -215,12 +217,11 @@
       "password": "11223344",
       "notes": "Stok CarX Street riistore",
       "giveawayCode": "RII-Y8BY-VHXS",
-      "status": "claimed",
+      "status": "available",
       "createdAt": "2026-11-16T10:49:26.149Z",
-      "claimedAt": "2026-11-16T12:07:36.127Z",
-      "claimedByCode": "RII-Y8BY-VHXS",
-      "claimedByIp": "36.85.144.141",
-      "claimedByDevice": "did_1794830646847_t1n9hg4o"
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
     },
     {
       "id": "acc_1794826166149_eysnb",
@@ -367,8 +368,8 @@
       "id": "code_1794830422095_a6zsw",
       "code": "RII-LT4P-V5Z3",
       "maxUses": 1,
-      "usedCount": 0,
-      "status": "active",
+      "usedCount": 1,
+      "status": "depleted",
       "createdAt": "2026-11-16T12:00:22.095Z",
       "description": "Giveaway akun wefejfhghejrg@bemm.id"
     },
@@ -412,8 +413,8 @@
       "id": "code_1794826729112_rk720",
       "code": "RII-B9CY-AUU4",
       "maxUses": 1,
-      "usedCount": 0,
-      "status": "active",
+      "usedCount": 1,
+      "status": "depleted",
       "createdAt": "2026-11-16T10:58:49.112Z",
       "description": "Giveaway akun qwdewjfghe@bemm.id"
     },
@@ -475,8 +476,8 @@
       "id": "code_1794826166149_652po",
       "code": "RII-Y8BY-VHXS",
       "maxUses": 1,
-      "usedCount": 1,
-      "status": "depleted",
+      "usedCount": 0,
+      "status": "active",
       "createdAt": "2026-11-16T10:49:26.149Z",
       "description": "Giveaway akun wqwedwqhdfjf@feat.uk"
     },
@@ -600,12 +601,21 @@
   ],
   "claimHistory": [
     {
-      "id": "hist_1794830856128",
-      "code": "RII-Y8BY-VHXS",
-      "email": "wqwedwqhdfjf@feat.uk",
-      "claimedAt": "2026-11-16T12:07:36.127Z",
-      "ip": "36.85.144.141",
-      "deviceId": "did_1794830646847_t1n9hg4o",
+      "id": "hist_1794830869152",
+      "code": "RII-B9CY-AUU4",
+      "email": "qwdewjfghe@bemm.id",
+      "claimedAt": "2026-11-16T12:07:49.152Z",
+      "ip": "77.111.246.8",
+      "deviceId": "did_1794830732749_m6j7ipk8",
+      "accountNotes": "Stok CarX Street riistore"
+    },
+    {
+      "id": "hist_1794830856091",
+      "code": "RII-LT4P-V5Z3",
+      "email": "wefejfhghejrg@bemm.id",
+      "claimedAt": "2026-11-16T12:07:36.090Z",
+      "ip": "182.1.136.182",
+      "deviceId": "did_1794830742282_73hfrq9v",
       "accountNotes": "Stok CarX Street riistore"
     },
     {
@@ -869,10 +879,16 @@
       "code": "RII-4V9K-A9FQ"
     },
     {
-      "ip": "36.85.144.141",
-      "deviceId": "did_1794830646847_t1n9hg4o",
-      "claimedAt": "2026-11-16T12:07:36.127Z",
-      "code": "RII-Y8BY-VHXS"
+      "ip": "182.1.136.182",
+      "deviceId": "did_1794830742282_73hfrq9v",
+      "claimedAt": "2026-11-16T12:07:36.090Z",
+      "code": "RII-LT4P-V5Z3"
+    },
+    {
+      "ip": "77.111.246.8",
+      "deviceId": "did_1794830732749_m6j7ipk8",
+      "claimedAt": "2026-11-16T12:07:49.152Z",
+      "code": "RII-B9CY-AUU4"
     }
   ]
 }
