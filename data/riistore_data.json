@@ -12,6 +12,18 @@
   },
   "accounts": [
     {
+      "id": "acc_1794824780961_uk9e1",
+      "email": "refhgrfggd@4.uk",
+      "password": "11223344",
+      "notes": "",
+      "giveawayCode": "RII-UUHU-9GMR",
+      "status": "available",
+      "createdAt": "2026-11-16T10:26:20.961Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
       "id": "acc_1794824601080_04qdd",
       "email": "refhgrfggd@3.uk",
       "password": "11223344",
@@ -50,6 +62,15 @@
     }
   ],
   "codes": [
+    {
+      "id": "code_1794824780961_pcfi1",
+      "code": "RII-UUHU-9GMR",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:26:20.961Z",
+      "description": "Giveaway akun refhgrfggd@4.uk"
+    },
     {
       "id": "code_1794824601080_e43i4",
       "code": "RII-8YXN-PQUG",
