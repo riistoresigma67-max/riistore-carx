@@ -12,6 +12,18 @@
   },
   "accounts": [
     {
+      "id": "acc_1794824585406_s0qev",
+      "email": "refhgrfggd@2.uk",
+      "password": "11223344",
+      "notes": "",
+      "giveawayCode": "RII-UTLA-59L6",
+      "status": "available",
+      "createdAt": "2026-11-16T10:23:05.406Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
       "id": "acc_1794824561542_sh1ey",
       "email": "refhgrfggd@1.uk",
       "password": "11223344",
@@ -25,6 +37,15 @@
     }
   ],
   "codes": [
+    {
+      "id": "code_1794824585406_s1c83",
+      "code": "RII-UTLA-59L6",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:23:05.406Z",
+      "description": "Giveaway akun refhgrfggd@2.uk"
+    },
     {
       "id": "code_1794824561541_q5x3e",
       "code": "RII-AHWA-ND4H",
