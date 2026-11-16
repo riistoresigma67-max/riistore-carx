@@ -41,11 +41,12 @@
       "password": "11223344",
       "notes": "",
       "giveawayCode": "RII-UTLA-59L6",
-      "status": "available",
+      "status": "claimed",
       "createdAt": "2026-11-16T10:23:05.406Z",
-      "claimedAt": null,
-      "claimedByCode": null,
-      "claimedByIp": null
+      "claimedAt": "2026-11-16T10:29:17.432Z",
+      "claimedByCode": "RII-UTLA-59L6",
+      "claimedByIp": "36.65.1.96",
+      "claimedByDevice": "did_1794824627193_rw4snhg2"
     },
     {
       "id": "acc_1794824561542_sh1ey",
@@ -84,8 +85,8 @@
       "id": "code_1794824585406_s1c83",
       "code": "RII-UTLA-59L6",
       "maxUses": 1,
-      "usedCount": 0,
-      "status": "active",
+      "usedCount": 1,
+      "status": "depleted",
       "createdAt": "2026-11-16T10:23:05.406Z",
       "description": "Giveaway akun refhgrfggd@2.uk"
     },
@@ -127,6 +128,15 @@
     }
   ],
   "claimHistory": [
+    {
+      "id": "hist_1794824957433",
+      "code": "RII-UTLA-59L6",
+      "email": "refhgrfggd@2.uk",
+      "claimedAt": "2026-11-16T10:29:17.432Z",
+      "ip": "36.65.1.96",
+      "deviceId": "did_1794824627193_rw4snhg2",
+      "accountNotes": ""
+    },
     {
       "id": "hist_1794824748442",
       "code": "RII-AHWA-ND4H",
@@ -182,5 +192,12 @@
       "accountNotes": "Akun CarX Street #1"
     }
   ],
-  "claimedIdentifiers": []
+  "claimedIdentifiers": [
+    {
+      "ip": "36.65.1.96",
+      "deviceId": "did_1794824627193_rw4snhg2",
+      "claimedAt": "2026-11-16T10:29:17.432Z",
+      "code": "RII-UTLA-59L6"
+    }
+  ]
 }
