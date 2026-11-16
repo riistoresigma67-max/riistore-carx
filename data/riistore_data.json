@@ -226,11 +226,12 @@
       "password": "11223344",
       "notes": "Stok CarX Street riistore",
       "giveawayCode": "RII-LZH2-BYRX",
-      "status": "available",
+      "status": "claimed",
       "createdAt": "2026-11-16T10:49:26.149Z",
-      "claimedAt": null,
-      "claimedByCode": null,
-      "claimedByIp": null
+      "claimedAt": "2026-11-16T12:06:17.188Z",
+      "claimedByCode": "RII-LZH2-BYRX",
+      "claimedByIp": "114.79.6.247",
+      "claimedByDevice": "did_1794830618622_22ln9pkp"
     },
     {
       "id": "acc_1794826166149_x1sma",
@@ -481,8 +482,8 @@
       "id": "code_1794826166149_c3shq",
       "code": "RII-LZH2-BYRX",
       "maxUses": 1,
-      "usedCount": 0,
-      "status": "active",
+      "usedCount": 1,
+      "status": "depleted",
       "createdAt": "2026-11-16T10:49:26.149Z",
       "description": "Giveaway akun wqdewjshfgjwef@feat.uk"
     },
@@ -596,6 +597,15 @@
     }
   ],
   "claimHistory": [
+    {
+      "id": "hist_1794830777188",
+      "code": "RII-LZH2-BYRX",
+      "email": "wqdewjshfgjwef@feat.uk",
+      "claimedAt": "2026-11-16T12:06:17.188Z",
+      "ip": "114.79.6.247",
+      "deviceId": "did_1794830618622_22ln9pkp",
+      "accountNotes": "Stok CarX Street riistore"
+    },
     {
       "id": "hist_1794830748128",
       "code": "RII-Y8VH-7YBW",
@@ -825,6 +835,12 @@
       "deviceId": "did_1794830657651_vol0gulv",
       "claimedAt": "2026-11-16T12:05:48.128Z",
       "code": "RII-Y8VH-7YBW"
+    },
+    {
+      "ip": "114.79.6.247",
+      "deviceId": "did_1794830618622_22ln9pkp",
+      "claimedAt": "2026-11-16T12:06:17.188Z",
+      "code": "RII-LZH2-BYRX"
     }
   ]
 }
