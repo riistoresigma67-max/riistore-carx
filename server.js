@@ -10,6 +10,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Cloud persistence sync middleware (ensures latest state on serverless)
+app.use(async (req, res, next) => {
+  try {
+    await db.ensureInitialized();
+  } catch (e) {}
+  next();
+});
+
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, 'public')));
 
