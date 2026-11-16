@@ -73,9 +73,18 @@ class Database {
     this.memoryCache = null;
     this.lastGithubSync = 0;
     this.cachedSha = null;
+    this._initialized = false;
+    this._initPromise = null;
+  }
 
-    // Background sync on startup
-    this.syncFromCloud();
+  async ensureInitialized() {
+    if (this._initialized) return;
+    if (!this._initPromise) {
+      this._initPromise = this.syncFromCloud().then(() => {
+        this._initialized = true;
+      });
+    }
+    await this._initPromise;
   }
 
   // Sync latest data from GitHub repository (Cloud persistence)
@@ -109,25 +118,24 @@ class Database {
   async pushToCloud(dataToSave) {
     if (!GITHUB_TOKEN) return;
     try {
-      // Get SHA if not known
-      if (!this.cachedSha) {
-        const check = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/data/riistore_data.json`, {
-          headers: {
-            'Authorization': `Bearer ${GITHUB_TOKEN}`,
-            'User-Agent': 'RiistoreCloudDB'
-          }
-        });
-        if (check.ok) {
-          const cData = await check.json();
-          this.cachedSha = cData.sha;
+      // Always get latest sha from GitHub first to avoid 409 conflict
+      const check = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/data/riistore_data.json`, {
+        headers: {
+          'Authorization': `Bearer ${GITHUB_TOKEN}`,
+          'User-Agent': 'RiistoreCloudDB',
+          'Accept': 'application/vnd.github.v3+json'
         }
+      });
+      if (check.ok) {
+        const cData = await check.json();
+        this.cachedSha = cData.sha;
       }
 
       const content = Buffer.from(JSON.stringify(dataToSave, null, 2), 'utf8').toString('base64');
       const body = {
         message: 'Auto-sync riistore database',
         content,
-        sha: this.cachedSha
+        sha: this.cachedSha || undefined
       };
 
       const putRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/data/riistore_data.json`, {
@@ -143,6 +151,7 @@ class Database {
       if (putRes.ok) {
         const resData = await putRes.json();
         this.cachedSha = resData.content ? resData.content.sha : null;
+        console.log('✅ Cloud DB synced to GitHub successfully!');
       }
     } catch (e) {
       console.error('Error pushing to GitHub cloud DB:', e.message);
@@ -173,14 +182,13 @@ class Database {
   }
 
   // Write data atomically to writable directory & sync cloud
-  write(data) {
+  async write(data) {
     this.memoryCache = data;
     try {
-      const tempFile = path.join(DATA_DIR, `riistore_data_${Date.now()}.tmp`);
+      const tempFile = path.join(DATA_DIR, `riistore_data_${Date.now()}_${Math.random().toString(36).slice(2)}.tmp`);
       fs.writeFileSync(tempFile, JSON.stringify(data, null, 2), 'utf8');
       fs.renameSync(tempFile, DATA_FILE);
     } catch (err) {
-      // Fallback direct write if atomic rename fails on some serverless FS
       try {
         fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
       } catch (e) {
@@ -188,8 +196,8 @@ class Database {
       }
     }
 
-    // Background push to GitHub cloud DB
-    this.pushToCloud(data);
+    // Await cloud sync for serverless
+    await this.pushToCloud(data);
   }
 
   // Thread-safe / mutex wrapper for mutations
@@ -230,7 +238,7 @@ class Database {
 
   // --- Redeem / Claim Logic ---
   async claimCode(rawCode, clientIp, deviceId) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.codes = data.codes || [];
       data.accounts = data.accounts || [];
@@ -337,7 +345,7 @@ class Database {
       }
 
       // Save database
-      this.write(data);
+      await this.write(data);
 
       return {
         success: true,
@@ -388,7 +396,7 @@ class Database {
 
   // Account Management
   addAccount(email, password, notes, customGiveawayCode) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.accounts = data.accounts || [];
       data.codes = data.codes || [];
@@ -441,7 +449,7 @@ class Database {
       };
 
       data.accounts.unshift(newAccount);
-      this.write(data);
+      await this.write(data);
       return { 
         success: true, 
         message: `Akun & Kode Giveaway (${codeToUse}) berhasil disimpan!`, 
@@ -453,7 +461,7 @@ class Database {
 
   // Bulk add accounts (supports: email or email:password or email:password:notes)
   bulkAddAccounts(bulkText, autoGenerateCodes = true, defaultPwd = '11223344') {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.accounts = data.accounts || [];
       data.codes = data.codes || [];
@@ -512,7 +520,7 @@ class Database {
         }
       }
 
-      this.write(data);
+      await this.write(data);
       return {
         success: true,
         message: `Berhasil menambahkan ${added} akun dengan password otomatis & kode giveaway! ${skipped > 0 ? `(${skipped} dilewati karena duplikat)` : ''}`,
@@ -543,7 +551,7 @@ class Database {
   }
 
   deleteAccount(accountId) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.accounts = data.accounts || [];
       data.codes = data.codes || [];
@@ -556,25 +564,25 @@ class Database {
         data.codes = data.codes.filter(c => c.code.toUpperCase() !== target.giveawayCode.toUpperCase());
       }
       data.accounts = data.accounts.filter(a => a.id !== accountId);
-      this.write(data);
+      await this.write(data);
       return { success: true, message: 'Akun dan kode giveaway terkait berhasil dihapus!' };
     });
   }
 
   clearClaimedAccounts() {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.accounts = data.accounts || [];
       const count = data.accounts.filter(a => a.status === 'claimed').length;
       data.accounts = data.accounts.filter(a => a.status === 'available');
-      this.write(data);
+      await this.write(data);
       return { success: true, message: `Berhasil membersihkan ${count} akun yang sudah terklaim!` };
     });
   }
 
   // Code Management
   generateCodes({ count = 5, prefix = 'RII-', maxUses = 1, description = '' }) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.codes = data.codes || [];
       const generated = [];
@@ -596,7 +604,7 @@ class Database {
         generated.push(newCode);
       }
 
-      this.write(data);
+      await this.write(data);
       return {
         success: true,
         message: `Berhasil membuat ${generated.length} kode giveaway baru!`,
@@ -606,7 +614,7 @@ class Database {
   }
 
   addCustomCode({ code, maxUses = 1, description = '' }) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.codes = data.codes || [];
       const cleanCode = (code || '').trim().toUpperCase();
@@ -630,13 +638,13 @@ class Database {
       };
 
       data.codes.unshift(newCode);
-      this.write(data);
+      await this.write(data);
       return { success: true, message: 'Kode custom berhasil dibuat!', code: newCode };
     });
   }
 
   deleteCode(codeId) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       data.codes = data.codes || [];
       const initialLen = data.codes.length;
@@ -644,25 +652,25 @@ class Database {
       if (data.codes.length === initialLen) {
         return { success: false, message: 'Kode tidak ditemukan!' };
       }
-      this.write(data);
+      await this.write(data);
       return { success: true, message: 'Kode giveaway berhasil dihapus!' };
     });
   }
 
   // Reset 1-claim limitation (starts fresh event)
   resetClaimLimits() {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       const count = (data.claimedIdentifiers || []).length;
       data.claimedIdentifiers = [];
-      this.write(data);
+      await this.write(data);
       return { success: true, message: `Berhasil mereset batasan klaim (${count} pengguna/IP dibuka kuncinya)!` };
     });
   }
 
   // Settings
   updateSettings(newSettings) {
-    return this.lock(() => {
+    return this.lock(async () => {
       const data = this.read();
       if (newSettings.storeName) data.settings.storeName = newSettings.storeName.trim();
       if (newSettings.tagline) data.settings.tagline = newSettings.tagline.trim();
@@ -676,7 +684,7 @@ class Database {
         data.settings.limitOnePerPerson = newSettings.limitOnePerPerson;
       }
 
-      this.write(data);
+      await this.write(data);
       return { success: true, message: 'Pengaturan berhasil diperbarui!', settings: data.settings };
     });
   }
