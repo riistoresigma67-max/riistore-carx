@@ -1,0 +1,18 @@
+{
+  "name": "riistore-carx-giveaway",
+  "version": "1.0.0",
+  "description": "Website Giveaway Akun CarX Street - riistore",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["carx-street", "giveaway", "riistore"],
+  "author": "riistore",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}
