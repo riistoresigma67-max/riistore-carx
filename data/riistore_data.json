@@ -1,0 +1,98 @@
+{
+  "settings": {
+    "storeName": "riistore",
+    "tagline": "Pusat Giveaway & Akun Game CarX Street Terpercaya",
+    "announcement": "🔥 Giveaway Akun CarX Street Spesial riistore! Masukkan kode untuk klaim akunmu sekarang!",
+    "adminPin": "Heri12345",
+    "whatsapp": "https://wa.me/6281234567890",
+    "tiktok": "https://tiktok.com",
+    "discord": "https://discord.gg",
+    "telegram": "https://t.me",
+    "limitOnePerPerson": true
+  },
+  "accounts": [],
+  "codes": [
+    {
+      "id": "code_1794822055965_8yq9a",
+      "code": "RII-XHRS-3PF4",
+      "maxUses": 1,
+      "usedCount": 1,
+      "status": "depleted",
+      "createdAt": "2026-11-16T09:40:55.965Z",
+      "description": "Giveaway akun test3@uk.uk"
+    },
+    {
+      "id": "code_1794822048736_ybrhq",
+      "code": "RII-NFND-C3QX",
+      "maxUses": 1,
+      "usedCount": 1,
+      "status": "depleted",
+      "createdAt": "2026-11-16T09:40:48.736Z",
+      "description": "Giveaway akun test2@uk.uk"
+    },
+    {
+      "id": "code_1794822040683_khzye",
+      "code": "RII-875K-39J4",
+      "maxUses": 1,
+      "usedCount": 1,
+      "status": "depleted",
+      "createdAt": "2026-11-16T09:40:40.683Z",
+      "description": "Giveaway akun test1@uk.uk"
+    }
+  ],
+  "claimHistory": [
+    {
+      "id": "hist_1794822759469",
+      "code": "RII-NFND-C3QX",
+      "email": "test2@uk.uk",
+      "claimedAt": "2026-11-16T09:52:39.469Z",
+      "ip": "114.5.213.193",
+      "deviceId": "did_1794822717485_epqv4kdc",
+      "accountNotes": ""
+    },
+    {
+      "id": "hist_1794822287850",
+      "code": "RII-XHRS-3PF4",
+      "email": "test3@uk.uk",
+      "claimedAt": "2026-11-16T09:44:47.850Z",
+      "ip": "103.69.107.126",
+      "deviceId": "did_1794822285015_0p94pdr8",
+      "accountNotes": ""
+    },
+    {
+      "id": "hist_1794822224120",
+      "code": "RII-875K-39J4",
+      "email": "test1@uk.uk",
+      "claimedAt": "2026-11-16T09:43:44.120Z",
+      "ip": "114.5.213.193",
+      "deviceId": "did_1794821447418_qubty55d",
+      "accountNotes": ""
+    },
+    {
+      "id": "hist_1794821927996",
+      "code": "RII-RZUK-HAGJ",
+      "email": "efdhfgvhdfhh@2.uk",
+      "claimedAt": "2026-11-16T09:38:47.996Z",
+      "ip": "114.5.213.193",
+      "deviceId": "did_1794821447418_qubty55d",
+      "accountNotes": "Akun CarX Street #2"
+    },
+    {
+      "id": "hist_1794821862063",
+      "code": "RII-D2VB-6VAJ",
+      "email": "efdhfgvhdfhh@1.uk",
+      "claimedAt": "2026-11-16T09:37:42.063Z",
+      "ip": "114.5.213.193",
+      "deviceId": "did_1794821447418_qubty55d",
+      "accountNotes": "Akun CarX Street #1"
+    }
+  ],
+  "claimedIdentifiers": [
+    {
+      "ip": "114.5.213.193",
+      "deviceId": "did_1794822717485_epqv4kdc",
+      "claimedAt": "2026-11-16T09:52:39.469Z",
+      "code": "RII-NFND-C3QX"
+    }
+  ]
+}
