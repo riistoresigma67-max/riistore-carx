@@ -123,12 +123,5 @@
       "accountNotes": "Akun CarX Street #1"
     }
   ],
-  "claimedIdentifiers": [
-    {
-      "ip": "36.65.1.96",
-      "deviceId": "did_1794824627193_rw4snhg2",
-      "claimedAt": "2026-11-16T10:29:17.432Z",
-      "code": "RII-UTLA-59L6"
-    }
-  ]
+  "claimedIdentifiers": []
 }
