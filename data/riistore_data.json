@@ -10,30 +10,8 @@
     "telegram": "https://t.me",
     "limitOnePerPerson": true
   },
-  "accounts": [
-    {
-      "id": "acc_1794824247362_5ieoi",
-      "email": "testlive@riistore.com",
-      "password": "mypassword123",
-      "notes": "",
-      "giveawayCode": "RII-LIVE-TEST",
-      "status": "available",
-      "createdAt": "2026-11-16T10:17:27.362Z",
-      "claimedAt": null,
-      "claimedByCode": null,
-      "claimedByIp": null
-    }
-  ],
+  "accounts": [],
   "codes": [
-    {
-      "id": "code_1794824247360_3iovs",
-      "code": "RII-LIVE-TEST",
-      "maxUses": 1,
-      "usedCount": 0,
-      "status": "active",
-      "createdAt": "2026-11-16T10:17:27.360Z",
-      "description": "Giveaway akun testlive@riistore.com"
-    },
     {
       "id": "code_1794822055965_8yq9a",
       "code": "RII-XHRS-3PF4",
