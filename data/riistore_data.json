@@ -12,6 +12,90 @@
   },
   "accounts": [
     {
+      "id": "acc_1794830422095_zzrvy",
+      "email": "wwefdefgjjhef@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-HYVP-33MS",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794830422095_bisa4",
+      "email": "werfejfhjrwfgrg@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-RFU6-AR3E",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794830422095_k1e8i",
+      "email": "wefjehfjrfgg@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-ZZZ9-RTMM",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794830422095_yht75",
+      "email": "fewdfghjrwgfv@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-FW3Y-AUHE",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794830422095_4crvn",
+      "email": "wefejfhghejrg@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-LT4P-V5Z3",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794830422095_7kxye",
+      "email": "wefedjhfjwref@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-BNKU-UP4H",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794830422095_ce2qe",
+      "email": "wqdfjehgfwef@bemm.id",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-FV38-VVCH",
+      "status": "available",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
       "id": "acc_1794826729112_x66zp",
       "email": "efdwjfghjrff@bemm.id",
       "password": "11223344",
@@ -229,6 +313,69 @@
     }
   ],
   "codes": [
+    {
+      "id": "code_1794830422095_2hb2y",
+      "code": "RII-HYVP-33MS",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun wwefdefgjjhef@bemm.id"
+    },
+    {
+      "id": "code_1794830422095_i01kv",
+      "code": "RII-RFU6-AR3E",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun werfejfhjrwfgrg@bemm.id"
+    },
+    {
+      "id": "code_1794830422095_35evy",
+      "code": "RII-ZZZ9-RTMM",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun wefjehfjrfgg@bemm.id"
+    },
+    {
+      "id": "code_1794830422095_pjpwt",
+      "code": "RII-FW3Y-AUHE",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun fewdfghjrwgfv@bemm.id"
+    },
+    {
+      "id": "code_1794830422095_a6zsw",
+      "code": "RII-LT4P-V5Z3",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun wefejfhghejrg@bemm.id"
+    },
+    {
+      "id": "code_1794830422095_9hhzs",
+      "code": "RII-BNKU-UP4H",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun wefedjhfjwref@bemm.id"
+    },
+    {
+      "id": "code_1794830422095_cw206",
+      "code": "RII-FV38-VVCH",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T12:00:22.095Z",
+      "description": "Giveaway akun wqdfjehgfwef@bemm.id"
+    },
     {
       "id": "code_1794826729112_a70cr",
       "code": "RII-7PPD-UCQK",
