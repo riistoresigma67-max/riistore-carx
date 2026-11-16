@@ -12,6 +12,18 @@
   },
   "accounts": [
     {
+      "id": "acc_1794824401406_n9gmz",
+      "email": "carxtest@riistore.com",
+      "password": "11223344",
+      "notes": "Akun Tes Cloud Persistence",
+      "giveawayCode": "RII-VERCEL-OK",
+      "status": "available",
+      "createdAt": "2026-11-16T10:20:01.406Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
       "id": "acc_1794824247362_5ieoi",
       "email": "testlive@riistore.com",
       "password": "mypassword123",
@@ -25,6 +37,15 @@
     }
   ],
   "codes": [
+    {
+      "id": "code_1794824401406_cix5a",
+      "code": "RII-VERCEL-OK",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:20:01.406Z",
+      "description": "Giveaway akun carxtest@riistore.com"
+    },
     {
       "id": "code_1794824247360_3iovs",
       "code": "RII-LIVE-TEST",
