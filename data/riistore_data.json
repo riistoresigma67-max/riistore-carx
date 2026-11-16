@@ -12,6 +12,78 @@
   },
   "accounts": [
     {
+      "id": "acc_1794826166149_oifta",
+      "email": "wqwedwqhdfjf@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-Y8BY-VHXS",
+      "status": "available",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826166149_eysnb",
+      "email": "wqdewjshfgjwef@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-LZH2-BYRX",
+      "status": "available",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826166149_x1sma",
+      "email": "qwedhfdgeff@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-6CQH-SMGY",
+      "status": "available",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826166149_omz1t",
+      "email": "ewffgefhjrefgfv@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-XZMT-RLCJ",
+      "status": "available",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826166149_nb143",
+      "email": "ewfwerjfhgrg@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-ES5G-7ARW",
+      "status": "available",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794826166149_6o60z",
+      "email": "wfefhjjehjfe@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-Y8VH-7YBW",
+      "status": "available",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
       "id": "acc_1794825951961_g1c0v",
       "email": "efefefewfefff@feat.uk",
       "password": "11223344",
@@ -49,6 +121,60 @@
     }
   ],
   "codes": [
+    {
+      "id": "code_1794826166149_652po",
+      "code": "RII-Y8BY-VHXS",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "description": "Giveaway akun wqwedwqhdfjf@feat.uk"
+    },
+    {
+      "id": "code_1794826166149_c3shq",
+      "code": "RII-LZH2-BYRX",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "description": "Giveaway akun wqdewjshfgjwef@feat.uk"
+    },
+    {
+      "id": "code_1794826166149_z72ti",
+      "code": "RII-6CQH-SMGY",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "description": "Giveaway akun qwedhfdgeff@feat.uk"
+    },
+    {
+      "id": "code_1794826166149_eoolg",
+      "code": "RII-XZMT-RLCJ",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "description": "Giveaway akun ewffgefhjrefgfv@feat.uk"
+    },
+    {
+      "id": "code_1794826166149_vlll7",
+      "code": "RII-ES5G-7ARW",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "description": "Giveaway akun ewfwerjfhgrg@feat.uk"
+    },
+    {
+      "id": "code_1794826166149_hyhaq",
+      "code": "RII-Y8VH-7YBW",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:49:26.149Z",
+      "description": "Giveaway akun wfefhjjehjfe@feat.uk"
+    },
     {
       "id": "code_1794825951961_zwxgo",
       "code": "RII-A868-FWP2",
