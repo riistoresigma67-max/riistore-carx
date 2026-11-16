@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>riistore - Giveaway Akun CarX Street Gratis</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f59e0b'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z'/></svg>">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-[#080b12] text-gray-100 min-h-screen flex flex-col bg-grid-pattern selection:bg-amber-500 selection:text-black">
+
+  <!-- Running Announcement Bar -->
+  <div id="announcement-bar" class="bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-black font-semibold text-xs md:text-sm py-1.5 px-4 shadow-md flex items-center overflow-hidden">
+    <div class="flex items-center gap-2 flex-shrink-0 bg-black/20 px-2 py-0.5 rounded text-xs uppercase font-extrabold mr-3">
+      <i data-lucide="megaphone" class="w-3.5 h-3.5"></i>
+      <span>PENGUMUMAN</span>
+    </div>
+    <div class="marquee-container flex-1">
+      <div id="announcement-text" class="marquee-content font-bold">
+        🔥 Giveaway Akun CarX Street Spesial riistore! Masukkan kode untuk klaim akunmu sekarang!
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="border-b border-gray-800/80 sticky top-0 z-40 bg-[#080b12]/90 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
+          <i data-lucide="car" class="w-6 h-6 text-black stroke-[2.5]"></i>
+        </div>
+        <div>
+          <span id="nav-brand" class="text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
+            RIISTORE
+          </span>
+          <span class="block text-[10px] font-bold text-gray-400 -mt-1 tracking-widest uppercase">
+            CarX Street Giveaway
+          </span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>Sistem Online</span>
+        </div>
+
+        <a href="#cara-klaim" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors hidden md:block">
+          Cara Klaim
+        </a>
+
+        <a href="/admin" class="flex items-center gap-1.5 text-xs font-medium text-gray-400 hover:text-white bg-gray-900/90 border border-gray-700/60 px-3 py-1.5 rounded-lg hover:border-amber-500/50 transition-all">
+          <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+          <span>Admin</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-4xl mx-auto px-4 py-8 md:py-14 w-full">
+    
+    <!-- Hero Header -->
+    <div class="text-center space-y-4 mb-8">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs md:text-sm font-medium">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>Event Giveaway Game CarX Street</span>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white">
+        Klaim Akun <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 text-glow-orange">CarX Street</span> Gratis
+      </h1>
+
+      <p id="hero-tagline" class="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
+        Punya kode giveaway dari riistore? Masukkan kode acak kamu di bawah ini dan dapatkan email serta password akun CarX Street secara instan!
+      </p>
+    </div>
+
+    <!-- Live Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-8">
+      <div class="glass-panel p-4 rounded-2xl border border-gray-800 text-center relative overflow-hidden group hover:border-amber-500/40 transition-all">
+        <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1 flex items-center justify-center gap-1.5">
+          <i data-lucide="boxes" class="w-4 h-4 text-amber-400"></i>
+          <span>Stok Tersedia</span>
+        </div>
+        <div id="stat-available" class="text-2xl md:text-3xl font-black text-amber-400">
+          ...
+        </div>
+        <div class="text-[11px] text-gray-500 mt-0.5">Siap di-claim</div>
+      </div>
+
+      <div class="glass-panel p-4 rounded-2xl border border-gray-800 text-center relative overflow-hidden group hover:border-cyan-500/40 transition-all">
+        <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1 flex items-center justify-center gap-1.5">
+          <i data-lucide="gift" class="w-4 h-4 text-cyan-400"></i>
+          <span>Total Terklaim</span>
+        </div>
+        <div id="stat-claimed" class="text-2xl md:text-3xl font-black text-cyan-400">
+          ...
+        </div>
+        <div class="text-[11px] text-gray-500 mt-0.5">Player beruntung</div>
+      </div>
+
+      <div class="col-span-2 md:col-span-1 glass-panel p-4 rounded-2xl border border-gray-800 text-center relative overflow-hidden group hover:border-emerald-500/40 transition-all">
+        <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-1 flex items-center justify-center gap-1.5">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          <span>Status Server</span>
+        </div>
+        <div class="text-2xl md:text-3xl font-black text-emerald-400 flex items-center justify-center gap-2">
+          <span>ACTIVE</span>
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-badge"></span>
+        </div>
+        <div class="text-[11px] text-gray-500 mt-0.5">Auto-Delivery 24/7</div>
+      </div>
+    </div>
+
+    <!-- Claim Card Box -->
+    <div class="glass-panel-glow rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-2xl mb-12">
+      <!-- Glow Accents -->
+      <div class="absolute -top-24 -left-24 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-orange-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="p-2 rounded-lg bg-amber-500/10 text-amber-400">
+            <i data-lucide="key" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h2 class="text-lg md:text-xl font-bold text-white">Redeem Kode Giveaway</h2>
+            <p class="text-xs text-gray-400">Tempelkan kode unik yang kamu dapatkan untuk membuka akun</p>
+          </div>
+        </div>
+
+        <form id="claim-form" class="space-y-4">
+          <div>
+            <label for="redeem-code" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">
+              Kode Giveaway
+            </label>
+            <div class="relative">
+              <input 
+                type="text" 
+                id="redeem-code" 
+                placeholder="Contoh: RII-CARX-2026" 
+                required
+                autocomplete="off"
+                class="glass-input w-full px-5 py-4 text-lg md:text-xl font-mono tracking-wider font-bold text-white rounded-xl placeholder-gray-600 uppercase focus:ring-2 focus:ring-amber-500/50"
+              />
+              <button 
+                type="button" 
+                id="btn-paste"
+                class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-gray-400 hover:text-amber-400 bg-gray-800/80 hover:bg-gray-800 px-3 py-1.5 rounded-lg border border-gray-700 transition-all flex items-center gap-1"
+                title="Tempel dari Clipboard"
+              >
+                <i data-lucide="clipboard" class="w-3.5 h-3.5"></i>
+                <span class="hidden sm:inline">Paste</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Alert Message Area -->
+          <div id="claim-alert" class="hidden p-4 rounded-xl text-sm font-medium flex items-start gap-3">
+            <i id="alert-icon" data-lucide="info" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
+            <div id="alert-text" class="flex-1"></div>
+          </div>
+
+          <button 
+            type="submit" 
+            id="btn-submit-claim"
+            class="btn-race-orange w-full py-4 px-6 rounded-xl font-black text-black text-base md:text-lg tracking-wider uppercase flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            <i data-lucide="zap" class="w-5 h-5 fill-current"></i>
+            <span>Buka & Klaim Akun Sekarang</span>
+          </button>
+        </form>
+
+        <div class="mt-4 flex items-center justify-between text-xs text-gray-400 pt-3 border-t border-gray-800/60">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="lock" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span>1 Kode = 1 Akun CarX Street</span>
+          </div>
+          <div class="flex items-center gap-1.5 text-gray-500">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+            <span>Instan Tanpa Delay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div id="cara-klaim" class="glass-panel rounded-3xl p-6 md:p-8 border border-gray-800/80 mb-12">
+      <div class="text-center mb-8">
+        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Cara Mengikuti Giveaway & Klaim</h3>
+        <p class="text-xs md:text-sm text-gray-400">Ikuti 3 langkah mudah berikut untuk mendapatkan akun game gratis</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 relative">
+          <div class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-400 font-black text-base flex items-center justify-center mb-3 border border-amber-500/20">
+            1
+          </div>
+          <h4 class="font-bold text-white text-base mb-1">Dapatkan Kode Giveaway</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Pantau live stream, giveaway, atau event dari <span class="text-amber-400 font-semibold">riistore</span> di media sosial untuk mendapatkan kode acak yang dibagikan.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 relative">
+          <div class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-400 font-black text-base flex items-center justify-center mb-3 border border-cyan-500/20">
+            2
+          </div>
+          <h4 class="font-bold text-white text-base mb-1">Masukkan Kode di Web</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Ketik atau paste kode yang kamu dapatkan pada form di atas, lalu klik tombol <b>Buka & Klaim Akun Sekarang</b>.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/60 p-5 rounded-2xl border border-gray-800 relative">
+          <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 font-black text-base flex items-center justify-center mb-3 border border-emerald-500/20">
+            3
+          </div>
+          <h4 class="font-bold text-white text-base mb-1">Terima Akun & Mainkan</h4>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Sistem otomatis mengirimkan <b>Email</b> & <b>Password</b> akun CarX Street kamu. Segera login dan amankan akunmu!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="glass-panel rounded-3xl p-6 md:p-8 border border-gray-800/80 mb-12">
+      <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+        <i data-lucide="help-circle" class="w-5 h-5 text-amber-400"></i>
+        <span>Pertanyaan Sering Diajukan (FAQ)</span>
+      </h3>
+
+      <div class="space-y-4">
+        <div class="bg-gray-900/40 p-4 rounded-xl border border-gray-800">
+          <h4 class="font-bold text-white text-sm mb-1">Apakah akun CarX Street ini permanen?</h4>
+          <p class="text-xs text-gray-400">
+            Ya, setelah kamu mengklaim akun, akun tersebut menjadi milikmu sepenuhnya. Disarankan segera login ke dalam game CarX Street lalu ganti password atau tautkan ke email pribadimu agar lebih aman.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/40 p-4 rounded-xl border border-gray-800">
+          <h4 class="font-bold text-white text-sm mb-1">Mengapa muncul pesan kode sudah habis atau tidak valid?</h4>
+          <p class="text-xs text-gray-400">
+            Setiap kode memiliki kuota tertentu (biasanya 1 kali pakai). Jika muncul pesan kadaluarsa, artinya kode tersebut sudah lebih dulu diklaim oleh player lain.
+          </p>
+        </div>
+
+        <div class="bg-gray-900/40 p-4 rounded-xl border border-gray-800">
+          <h4 class="font-bold text-white text-sm mb-1">Bagaimana jika stok akun CarX Street sedang kosong?</h4>
+          <p class="text-xs text-gray-400">
+            Jika stok habis, kodes yang kamu masukkan <b>tidak akan hangus</b>! Tunggu admin riistore melakukan restock akun baru, lalu coba redeem kodenya kembali.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socials / Community -->
+    <div class="text-center py-6 border-t border-gray-800/80">
+      <h4 class="text-sm font-semibold text-gray-300 mb-3">Ikuti Komunitas & Update Giveaway Kami</h4>
+      <div id="social-links" class="flex items-center justify-center gap-3 flex-wrap">
+        <a id="link-wa" href="#" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-emerald-400 hover:border-emerald-500/50 transition-all text-xs font-semibold">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a id="link-tiktok" href="#" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-pink-400 hover:border-pink-500/50 transition-all text-xs font-semibold">
+          <i data-lucide="video" class="w-4 h-4 text-pink-400"></i>
+          <span>TikTok</span>
+        </a>
+        <a id="link-telegram" href="#" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all text-xs font-semibold">
+          <i data-lucide="send" class="w-4 h-4 text-cyan-400"></i>
+          <span>Telegram</span>
+        </a>
+        <a id="link-discord" href="#" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-indigo-400 hover:border-indigo-500/50 transition-all text-xs font-semibold">
+          <i data-lucide="gamepad-2" class="w-4 h-4 text-indigo-400"></i>
+          <span>Discord</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 bg-[#080b12] py-6 text-center text-xs text-gray-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>&copy; <span id="current-year">2026</span> <span class="text-amber-400 font-semibold">riistore</span>. All rights reserved. CarX Street Giveaway System.</p>
+      <div class="flex items-center gap-4">
+        <a href="/admin" class="hover:text-amber-400 transition-colors">Admin Login</a>
+        <span>&bull;</span>
+        <span>Version 1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- MODAL REVEAL AKUN SUKSES KLAIM -->
+  <!-- ============================================================== -->
+  <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
+    <div class="glass-panel-glow border-amber-500/40 max-w-lg w-full rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-2xl animate-unlock">
+      <!-- Glow background -->
+      <div class="absolute -top-20 -right-20 w-44 h-44 bg-amber-500/30 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Close button -->
+      <button 
+        type="button" 
+        id="btn-close-modal"
+        class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-800/80 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition-all z-20"
+      >
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-500 text-black flex items-center justify-center mx-auto mb-3 shadow-lg shadow-amber-500/40">
+          <i data-lucide="trophy" class="w-9 h-9 stroke-[2.2]"></i>
+        </div>
+        <h3 class="text-2xl font-black text-white">SELAMAT! KLAIM BERHASIL</h3>
+        <p class="text-xs text-amber-300 font-medium">Akun Game CarX Street kamu berhasil dibuka!</p>
+      </div>
+
+      <!-- Credentials Box -->
+      <div class="bg-gray-950/90 rounded-2xl p-4 border border-gray-800 space-y-3 mb-5">
+        
+        <!-- Email Item -->
+        <div>
+          <span class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+            Email / Akun CarX Street
+          </span>
+          <div class="flex items-center gap-2 bg-gray-900 px-3 py-2.5 rounded-xl border border-gray-800">
+            <i data-lucide="mail" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+            <span id="modal-email" class="font-mono text-sm md:text-base font-bold text-white flex-1 select-all break-all">
+              user@example.com
+            </span>
+            <button 
+              type="button" 
+              id="btn-copy-email"
+              class="px-2.5 py-1 text-xs font-semibold bg-gray-800 hover:bg-amber-500 hover:text-black text-gray-300 rounded-lg transition-all flex items-center gap-1 flex-shrink-0"
+            >
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Salin</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Password Item -->
+        <div>
+          <span class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+            Password Akun
+          </span>
+          <div class="flex items-center gap-2 bg-gray-900 px-3 py-2.5 rounded-xl border border-gray-800">
+            <i data-lucide="key" class="w-4 h-4 text-amber-400 flex-shrink-0"></i>
+            <input 
+              type="password" 
+              id="modal-password" 
+              readonly 
+              value="********" 
+              class="font-mono text-sm md:text-base font-bold text-white bg-transparent flex-1 outline-none border-none select-all"
+            />
+            <button 
+              type="button" 
+              id="btn-toggle-password"
+              class="p-1 text-gray-400 hover:text-white transition-colors"
+              title="Lihat / Sembunyikan Password"
+            >
+              <i id="eye-icon" data-lucide="eye" class="w-4 h-4"></i>
+            </button>
+            <button 
+              type="button" 
+              id="btn-copy-password"
+              class="px-2.5 py-1 text-xs font-semibold bg-gray-800 hover:bg-amber-500 hover:text-black text-gray-300 rounded-lg transition-all flex items-center gap-1 flex-shrink-0"
+            >
+              <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+              <span>Salin</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Notes / Specs Item -->
+        <div id="modal-notes-container" class="pt-2 border-t border-gray-800/80">
+          <span class="block text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">
+            Detail / Spek Akun
+          </span>
+          <div id="modal-notes" class="text-xs text-amber-300/90 font-medium bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
+            CarX Street Level 45 + Nissan GT-R R35
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="space-y-2">
+        <button 
+          type="button" 
+          id="btn-copy-all"
+          class="btn-race-orange w-full py-3 rounded-xl font-bold text-black text-sm flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <i data-lucide="clipboard-check" class="w-4 h-4"></i>
+          <span>Salin Email & Password Sekaligus</span>
+        </button>
+
+        <p class="text-[11px] text-gray-400 text-center leading-relaxed">
+          ⚠️ <b>Penting:</b> Simpan data ini sekarang. Segera login ke game CarX Street dan ganti password akun untuk keamanan Anda.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-gray-900 border border-amber-500/50 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2.5 text-xs font-semibold">
+      <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+      <span id="toast-message">Teks tersalin!</span>
+    </div>
+  </div>
+
+  <!-- App Script -->
+  <script src="/js/app.js"></script>
+</body>
+</html>
