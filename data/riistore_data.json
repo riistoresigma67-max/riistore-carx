@@ -10,8 +10,72 @@
     "telegram": "https://t.me/riistore01",
     "limitOnePerPerson": true
   },
-  "accounts": [],
+  "accounts": [
+    {
+      "id": "acc_1794825951961_g1c0v",
+      "email": "efefefewfefff@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-A868-FWP2",
+      "status": "available",
+      "createdAt": "2026-11-16T10:45:51.961Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794825951961_yabzs",
+      "email": "wefdejhgfefe@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-WQTK-DUSC",
+      "status": "available",
+      "createdAt": "2026-11-16T10:45:51.961Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    },
+    {
+      "id": "acc_1794825951961_gcwzt",
+      "email": "dwesfchwvbse@feat.uk",
+      "password": "11223344",
+      "notes": "Stok CarX Street riistore",
+      "giveawayCode": "RII-UT6L-7GG4",
+      "status": "available",
+      "createdAt": "2026-11-16T10:45:51.961Z",
+      "claimedAt": null,
+      "claimedByCode": null,
+      "claimedByIp": null
+    }
+  ],
   "codes": [
+    {
+      "id": "code_1794825951961_zwxgo",
+      "code": "RII-A868-FWP2",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:45:51.961Z",
+      "description": "Giveaway akun efefefewfefff@feat.uk"
+    },
+    {
+      "id": "code_1794825951961_f5i1s",
+      "code": "RII-WQTK-DUSC",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:45:51.961Z",
+      "description": "Giveaway akun wefdejhgfefe@feat.uk"
+    },
+    {
+      "id": "code_1794825951960_c1rq6",
+      "code": "RII-UT6L-7GG4",
+      "maxUses": 1,
+      "usedCount": 0,
+      "status": "active",
+      "createdAt": "2026-11-16T10:45:51.960Z",
+      "description": "Giveaway akun dwesfchwvbse@feat.uk"
+    },
     {
       "id": "code_1794824585406_s1c83",
       "code": "RII-UTLA-59L6",
