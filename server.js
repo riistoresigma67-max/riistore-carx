@@ -187,11 +187,15 @@ app.use((req, res) => {
 });
 
 // Start Server
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`\n======================================================`);
-  console.log(`🚀 RIISTORE CARX STREET GIVEAWAY SERVER BERJALAN!`);
-  console.log(`🌐 Website Utama:  http://localhost:${PORT}`);
-  console.log(`🔑 Admin Panel:    http://localhost:${PORT}/admin`);
-  console.log(`🔒 Default Admin PIN: admin123`);
-  console.log(`======================================================\n`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`\n======================================================`);
+    console.log(`🚀 RIISTORE CARX STREET GIVEAWAY SERVER BERJALAN!`);
+    console.log(`🌐 Website Utama:  http://localhost:${PORT}`);
+    console.log(`🔑 Admin Panel:    http://localhost:${PORT}/admin`);
+    console.log(`🔒 Default Admin PIN: admin123`);
+    console.log(`======================================================\n`);
+  });
+}
+
+module.exports = app;
