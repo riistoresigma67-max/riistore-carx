@@ -17,11 +17,12 @@
       "password": "11223344",
       "notes": "Stok CarX Street riistore",
       "giveawayCode": "RII-HYVP-33MS",
-      "status": "available",
+      "status": "claimed",
       "createdAt": "2026-11-16T12:00:22.095Z",
-      "claimedAt": null,
-      "claimedByCode": null,
-      "claimedByIp": null
+      "claimedAt": "2026-11-16T12:03:44.013Z",
+      "claimedByCode": "RII-HYVP-33MS",
+      "claimedByIp": "182.10.129.180",
+      "claimedByDevice": "did_1794830576998_9hb8mn5h"
     },
     {
       "id": "acc_1794830422095_bisa4",
@@ -319,8 +320,8 @@
       "id": "code_1794830422095_2hb2y",
       "code": "RII-HYVP-33MS",
       "maxUses": 1,
-      "usedCount": 0,
-      "status": "active",
+      "usedCount": 1,
+      "status": "depleted",
       "createdAt": "2026-11-16T12:00:22.095Z",
       "description": "Giveaway akun wwefdefgjjhef@bemm.id"
     },
@@ -588,6 +589,15 @@
   ],
   "claimHistory": [
     {
+      "id": "hist_1794830624013",
+      "code": "RII-HYVP-33MS",
+      "email": "wwefdefgjjhef@bemm.id",
+      "claimedAt": "2026-11-16T12:03:44.013Z",
+      "ip": "182.10.129.180",
+      "deviceId": "did_1794830576998_9hb8mn5h",
+      "accountNotes": "Stok CarX Street riistore"
+    },
+    {
       "id": "hist_1794830622030",
       "code": "RII-FV38-VVCH",
       "email": "wqdfjehgfwef@bemm.id",
@@ -681,6 +691,12 @@
       "deviceId": "did_1794830585369_0278c5fm",
       "claimedAt": "2026-11-16T12:03:42.030Z",
       "code": "RII-FV38-VVCH"
+    },
+    {
+      "ip": "182.10.129.180",
+      "deviceId": "did_1794830576998_9hb8mn5h",
+      "claimedAt": "2026-11-16T12:03:44.013Z",
+      "code": "RII-HYVP-33MS"
     }
   ]
 }
